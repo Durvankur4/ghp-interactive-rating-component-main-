@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Medium-Grey: hsl(216, 12%, 54%);
+    --Dark-Blue: hsl(213, 19%, 18%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+    --Orange: hsl(25, 97%, 53%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Overpass;
+    color: var(--White);
+    background-color: var(--Very-Dark-Blue);
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.initial-card,
+.thankyou-card {
+    max-width: 25rem;
+    background-color: var(--Dark-Blue);
+    border-radius: .5rem;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+button {
+    border: none;
+    text-align: center;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin: 1rem 0;
+}
+
+p {
+    margin: 0 0 1rem;
+    opacity: 0.7;
+}
+
+
+
+.thankyou-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.star-icon {
+    padding: .5rem;
+    border-radius: 50%;
+    background-color: var(--Medium-Grey);
+}
+
+.thankyou-icon {
+    display: block;
+    margin: 0 auto 1.5rem;
+}
+
+.ratings {
+    display: flex;
+    justify-content: space-between;
+    color: var(--White);
+    margin: .5rem 0;
+}
+
+
+.star {
+    background-color: var(--Medium-Grey);
+    padding: 1rem;
+    color: var(--White);
+    margin: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    line-height: .5rem;
+    transition: background-color .3s;
+}
+
+.star:hover {
+    background-color: var(--Orange);
+}
+
+.star:focus {
+    background-color: var(--Light-Grey);
+}
+
+.submit,
+.rate-again {
+    opacity: 1;
+    width: 100%;
+    margin: 1rem 0 0 0;
+    padding: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    color: var(--White);
+    border-radius: 2rem;
+    background-color: var(--Orange);
+    transition: background-color .3s;
+}
+
+.submit:hover,
+.rate-again:hover {
+    background-color: var(--Light-Grey);
+}
+
+
+
+
+.selected-rating-paragraph {
+    display: inline-block;
+    color: var(--Orange);
+    background-color: var(--Very-Dark-Blue);
+    padding: .5rem .5rem;
+    border-radius: .5rem;
+    margin: 0;
+    opacity: 1;
+}
+
+.hidden {
+    display: none;
+}
